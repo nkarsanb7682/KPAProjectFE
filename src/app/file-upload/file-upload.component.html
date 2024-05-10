@@ -1,0 +1,14 @@
+<div class="card flex justify-content-center">
+    <p-toast />
+    <p-fileUpload 
+        mode="basic" 
+        chooseLabel="Choose" 
+        chooseIcon="pi pi-upload"
+        name="airports"
+        url="http://localhost:5238/api/airlines/uploadJsonFile" 
+        accept=".json" 
+        maxFileSize="7000000"
+        (onSend)="onSend($event)"
+        (onUpload)="onUpload($event)"
+        (onError)="onError($event)"/>
+</div>
